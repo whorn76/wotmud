@@ -1,0 +1,18 @@
+The biggest hurdle to getting this script to work is the Execution Policy that exist within the PowerShell environment.
+This policy is used to prevent unwanted PowerShell scripts from running.
+To run this PowerShell script you will need to configure PowerShell to be able to execute on your system.
+
+* Open Windows PowerShell as an administrator
+* Once this command line window is open we need to set the execution policy to allow for the script to run on your system:
+	
+	Set-ExecutionPolicy -scope CurrentUser Unrestricted
+
+This command will allow the script to run for the current user.  If you have other users that need to use this script on your computer then you will need to run the same command under their account.
+
+Here is the lines in the trigger that I use to execute the command:
+
+#var Misc/URL2 http://wotmad.herokuapp.com/stats/submit/?apikey=<Your WOTMAD API KEY>&name=@name~&sex=$sex~&faction=H~&class=$class~&homeland=@homeland~&strength=@str~&intel=@int~&wil=@wil~&dex=@dex~&con=@con
+
+#launch {cmd /c powershell.exe -f c:\games\cmudpro\statter\sendstats.ps1 ~"@URL2~"}
+
+You will need to setup the gathering of the appropriate variables yourself.  If you need help I might assist. :)
