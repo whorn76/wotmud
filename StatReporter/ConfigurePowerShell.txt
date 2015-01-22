@@ -13,6 +13,6 @@ Here is the lines in the trigger that I use to execute the command:
 
 #var Misc/URL2 http://wotmad.herokuapp.com/stats/submit/?apikey=<Your WOTMAD API KEY>&name=@name~&sex=$sex~&faction=H~&class=$class~&homeland=@homeland~&strength=@str~&intel=@int~&wil=@wil~&dex=@dex~&con=@con
 
-#launch {cmd /c powershell.exe -f c:\games\cmudpro\statter\sendstats.ps1 ~"@URL2~"}
+#launch {cmd /c powershell.exe -f c:\games\cmudpro\wotmudIV\sendstats.ps1 ~"@URL2~"}
 
 You will need to setup the gathering of the appropriate variables yourself.  If you need help I might assist. :)
